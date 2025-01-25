@@ -8,14 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: aws_lambda
+    environment: aws_lambda  # github repository environment 
 
     steps:
-    - name: Debug AWS Credentials
-      run: |
-        echo "AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
-        echo "AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-
     # Step 1: Check out the code from the repository
     - name: Checkout code
       uses: actions/checkout@v3
