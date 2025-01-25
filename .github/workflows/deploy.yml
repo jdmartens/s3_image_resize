@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: aws_lambda
 
     steps:
     - name: Debug AWS Credentials
