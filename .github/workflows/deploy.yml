@@ -24,7 +24,7 @@ jobs:
 
     # Step 3: Zip the Lambda function code
     - name: Package Lambda code
-      run: zip -r function.zip .  # Zips the current directory
+      run: zip -r function.zip .
 
     # Step 4: Deploy the Lambda function
     - name: Deploy Lambda function

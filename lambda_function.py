@@ -12,7 +12,6 @@ def lambda_handler(event, context):
     height = int(os.environ['HEIGHT'])
 
     # Get the source bucket and object key from the event
-    print('$$$$$$ event',event, context)
     source_bucket = event['Records'][0]['s3']['bucket']['name']
     object_key = event['Records'][0]['s3']['object']['key']
     
@@ -30,7 +29,6 @@ def lambda_handler(event, context):
         buffer.seek(0)
     
     # Upload the resized image to the output bucket
-    print('$$$$$$ output_bucket', output_bucket, object_key)
     s3_client.put_object(Bucket=output_bucket, Key=f"resized_{object_key}", Body=buffer)
     
     return {
