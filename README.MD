@@ -57,7 +57,7 @@ The AWS credentials used for deployment must have a policy that allows at a mini
         }
     ]
 }
-'''
+```
 
 ## Usage
 1. Upload an image to the source S3 bucket.
