@@ -30,7 +30,7 @@ jobs:
     - name: Deploy Lambda function
       run: |
         aws lambda update-function-code \
-          --function-name your-lambda-function-name \
+          --function-name s3_image_resize \
           --zip-file fileb://function.zip
 
 
